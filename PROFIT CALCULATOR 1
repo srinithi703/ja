@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class NewspaperProfitCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Inputs
+        int copiesSold = Integer.parseInt(scanner.nextLine());
+        int costPerCopy = Integer.parseInt(scanner.nextLine());
+        int costSpent = Integer.parseInt(scanner.nextLine());
+
+        // Profit logic
+        int profitPerCopy = costPerCopy - costSpent;
+        int actualProfit = profitPerCopy * copiesSold;
+
+        // Subtract Rs.100 from total profit
+        double finalProfit = actualProfit - 100;
+
+        // Output
+        System.out.println("Number of copies sold:" + copiesSold);
+        System.out.println("Cost of each copy:" + costPerCopy);
+        System.out.println("Cost spent by agency on each newspaper:" + costSpent);
+        System.out.printf("The profit obtained is Rs.%.2f\n", finalProfit);
+
+        scanner.close();
+    }
+}
