@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class MathOperations {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+      
+        float floatInput = Float.parseFloat(scanner.nextLine());
+        int squareValue = Integer.parseInt(scanner.nextLine());
+        int baseValue = Integer.parseInt(scanner.nextLine());
+        int powerValue = Integer.parseInt(scanner.nextLine());
+
+       
+        printFloorValue(floatInput);
+        printRoundedValue(floatInput);
+        printSquareRoot(squareValue);
+        printPowerValue(baseValue, powerValue);
+
+        scanner.close();
+    }
+
+   
+    public static void printFloorValue(float num) {
+        System.out.println((int) num);
+    }
+
+    
+    public static void printRoundedValue(float num) {
+        System.out.println(Math.round(num));
+    }
+
+   
+    public static void printSquareRoot(int num) {
+        int sqrt = (int) Math.sqrt(num);
+        System.out.println(sqrt);
+    }
+
+   
+    public static void printPowerValue(int base, int power) {
+        int result = (int) Math.pow(base, power);
+        System.out.println(result);
+    }
+}
