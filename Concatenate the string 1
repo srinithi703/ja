@@ -1,0 +1,13 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        if (!sc.hasNextLine()) return;
+        String first = sc.nextLine();
+        if (!sc.hasNextLine()) return;
+        String second = sc.nextLine();
+        System.out.print(first + second);
+        sc.close();
+    }
+}
