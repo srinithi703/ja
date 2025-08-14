@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
+
+        if (input.startsWith("-") || !input.matches("\\d+")) {
+            System.out.println("Invalid Input");
+            return;
+        }
+
+        int num = Integer.parseInt(input);
+        int sum = 0, temp = num;
+        int digits = input.length();
+
+        while (temp > 0) {
+            int rem = temp % 10;
+            sum += Math.pow(rem, digits);
+            temp /= 10;
+        }
+
+        if (sum == num)
+            System.out.println("yes");
+        else
+            System.out.println("no");
+    }
+}
